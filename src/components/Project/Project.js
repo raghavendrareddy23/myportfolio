@@ -29,7 +29,7 @@ const GitHubRepoComponent = () => {
     };
 
     fetchRepos();
-  }, []);
+  });
 
   const fetchLanguages = async (owner, repoName) => {
     try {
@@ -77,7 +77,9 @@ const GitHubRepoComponent = () => {
 
   return (
     <div>
-        <p className="text-center text-5xl" id="projects">Recent Projects</p>
+      <p className="text-center text-5xl" id="projects">
+        Recent Projects
+      </p>
       <div className="flex flex-wrap justify-center">
         {repos.map((repo) => (
           <div
@@ -88,9 +90,15 @@ const GitHubRepoComponent = () => {
               <div className="px-6 py-4">
                 <div className="font-bold text-xl mb-2">{repo.name}</div>
                 <div className="flex justify-between mb-2">
-                  <button className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
-                    Clone Repository
-                  </button>
+                  <a
+                    href={repo.html_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <button className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
+                      Clone Repository
+                    </button>
+                  </a>
                   <a
                     href={repo.html_url}
                     target="_blank"
