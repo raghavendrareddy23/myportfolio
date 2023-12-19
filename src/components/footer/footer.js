@@ -8,7 +8,7 @@ const Footer = () => {
       <p className="text-5xl">{heading}</p>
       <p className="text-lg mt-4">
         {message}
-        <a href='www.gmail.com' className="text-purple-500">
+        <a href="https://mail.google.com/" className="text-purple-500">
           {email}
         </a>
         .
