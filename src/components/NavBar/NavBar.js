@@ -113,7 +113,7 @@ const Navbar = () => {
           <a href="#skills" className="block mb-2">
             Skills
           </a>
-          <a href="#get-in-touch" className="block">
+          <a href="#getintouch" className="block">
             Get In Touch
           </a>
         </div>
